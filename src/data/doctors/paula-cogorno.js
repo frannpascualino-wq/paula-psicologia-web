@@ -48,10 +48,10 @@ const content = {
       label: 'Sobre mí',
       title: 'Una práctica clínica humana, clara y multicultural',
       p1: 'Soy Paula Cogorno, psicóloga con formación en Psicoanálisis y Terapia Cognitivo-Conductual.',
-      p2: 'Acompaño procesos terapéuticos de adultos, parejas y familias de manera cálida, ética y profesional.',
-      p3: 'Nací en Buenos Aires, Argentina, y he vivido en Puerto Rico, Brasil y actualmente en Ciudad de México. Estas experiencias multiculturales han nutrido mi mirada clínica, permitiéndome comprender la diversidad sociocultural y las distintas formas en que las personas viven, expresan y elaboran sus emociones en diferentes contextos.',
-      p4: '',
-      p5: '',
+      p2: 'Acompaño procesos terapéuticos de adultos, parejas y familias desde una mirada cálida, ética y profesional. Mi trabajo se orienta a escuchar el malestar, comprender su historia y abrir nuevas formas de vincularse consigo mismo y con los demás.',
+      p3: 'Trabajo con personas que atraviesan ansiedad, angustia, duelos, conflictos de pareja, crisis vitales, dependencia emocional, celos, separaciones y procesos de cambio personal.',
+      p4: 'Nací en Buenos Aires, Argentina, y he vivido en Puerto Rico, Brasil y actualmente en Ciudad de México. Estas experiencias multiculturales han nutrido mi mirada clínica, permitiéndome acompañar a personas de distintos contextos, historias y formas de vida.',
+      p5: 'Mi objetivo es ofrecer un espacio seguro donde puedas poner en palabras aquello que duele, se repite o todavía no ha podido ser elaborado.',
       cta: 'Agendar en Doctoralia',
     },
 
@@ -87,7 +87,7 @@ const content = {
         {
           title: 'Terapia de pareja',
           tag: 'Coterapia',
-          descPrimary: 'Proceso terapéutico en modalidad de "coterapia", acompañado de manera simultánea por las Mtras. Mónica Quintani y Paula Cogorno en cada sesión.',
+          descPrimary: 'Proceso terapéutico en modalidad de "coterapia", acompañado de manera simultánea por las Mtras. Mónica Quintans y Paula Cogorno en cada sesión.',
           descSecondary: 'Orientado a parejas en crisis, distancia emocional, dificultades de comunicación, celos.',
           cta: 'Agendar terapia de pareja',
           featured: false,
@@ -534,7 +534,7 @@ const paulaCogorno = {
     },
   },
   assets: {
-    logo: '/doctors/paula-cogorno/logo.png',
+    logo: '/paufoto.png',
     profilePhoto: '/doctors/paula-cogorno/paulacpic.jpeg',
     profileFallbackPhoto: '/doctors/paula-cogorno/paulacpic.jpeg',
     officePhoto: '/doctors/paula-cogorno/office.jpg',
