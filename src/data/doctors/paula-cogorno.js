@@ -16,7 +16,7 @@ const content = {
     },
 
     hero: {
-      title: 'Un espacio para escuchar lo que insiste y comprender lo que se repite',
+      title: 'Un espacio para poner en palabras aquello que insiste en silencio',
       subtitle: 'Atención psicológica para adultos, parejas y familias.',
       cta1: 'Agendar una primera sesión',
       cta2: 'Conocer el método',
