@@ -602,7 +602,7 @@ const paulaCogorno = {
     },
   },
   assets: {
-    logo: '/paufoto.png',
+    logo: '/paufoto-264.png',
     profilePhoto: '/doctors/paula-cogorno/paulacpic.jpeg',
     profileFallbackPhoto: '/doctors/paula-cogorno/paulacpic.jpeg',
     officePhoto: '/doctors/paula-cogorno/office.jpg',

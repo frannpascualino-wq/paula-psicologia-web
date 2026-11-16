@@ -62,10 +62,12 @@ export default function Footer({ t }) {
             <div className="footer__copyright">
               {f.copyright.replace('2025', year)}
             </div>
-            <div className="footer__legal">
-              <a href="#">{f.privacy}</a>
-              <a href="#">{f.terms}</a>
-            </div>
+            {(f.privacyUrl || f.termsUrl) && (
+              <div className="footer__legal">
+                {f.privacyUrl && <a href={f.privacyUrl}>{f.privacy}</a>}
+                {f.termsUrl && <a href={f.termsUrl}>{f.terms}</a>}
+              </div>
+            )}
           </div>
         </div>
       </div>
