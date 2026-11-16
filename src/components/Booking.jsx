@@ -12,12 +12,32 @@ export default function Booking({ t }) {
   const [formOpen, setFormOpen] = useState(false);
 
   useEffect(() => {
-    if (document.getElementById('zl-widget-s')) return;
-    const js = document.createElement('script');
-    js.id = 'zl-widget-s';
-    js.src = 'https://platform.docplanner.com/js/widget.js';
-    js.async = true;
-    document.body.appendChild(js);
+    const load = () => {
+      if (document.getElementById('zl-widget-s')) return;
+      const js = document.createElement('script');
+      js.id = 'zl-widget-s';
+      js.src = 'https://platform.docplanner.com/js/widget.js';
+      js.async = true;
+      document.body.appendChild(js);
+    };
+    const targets = ['opiniones', 'agenda']
+      .map((id) => document.getElementById(id))
+      .filter(Boolean);
+    if (!('IntersectionObserver' in window) || targets.length === 0) {
+      load();
+      return undefined;
+    }
+    const observer = new IntersectionObserver(
+      (entries) => {
+        if (entries.some((entry) => entry.isIntersecting)) {
+          load();
+          observer.disconnect();
+        }
+      },
+      { rootMargin: '900px 0px' },
+    );
+    targets.forEach((target) => observer.observe(target));
+    return () => observer.disconnect();
   }, []);
 
   const update = (field, val) => {
