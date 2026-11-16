@@ -17,7 +17,7 @@ export default function Contact({ t }) {
           <div className="contact__info">
             <SectionHeading index="08" label={c.label} title={c.title} variant="sh--flush" />
 
-            <dl className="contact__blocks" data-reveal>
+            <dl className="contact__blocks" data-reveal="stagger">
               <div className="contact__block">
                 <dt className="contact__block-title">
                   <span className="contact__item-icon" aria-hidden="true"><PinIcon /></span>
@@ -113,10 +113,10 @@ export default function Contact({ t }) {
         </div>
 
         {gallery.length > 0 && (
-          <figure className="contact__gallery" data-reveal>
+          <figure className="contact__gallery">
             <div className="contact__gallery-grid">
               {gallery.map((photo, i) => (
-                <div key={photo.jpg} className={`contact__gallery-item contact__gallery-item--${i + 1}`}>
+                <div key={photo.jpg} className={`contact__gallery-item contact__gallery-item--${i + 1}`} data-reveal="image">
                   <Photo
                     photo={photo}
                     alt={galleryAlts[i] || ''}

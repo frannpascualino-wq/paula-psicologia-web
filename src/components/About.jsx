@@ -1,9 +1,13 @@
 import { DOCTORALIA_URL } from '../config';
+import { doctorData } from '../data/doctorData';
 import SectionHeading from './SectionHeading';
+import Photo from './Photo';
+import Sprig from './Sprig';
 import { ArrowIcon } from './Icons';
 
 export default function About({ t }) {
   const a = t.about;
+  const photo = doctorData.assets.officeDetailPhoto;
 
   return (
     <section id="sobre-mi" className="section section--paper about">
@@ -11,6 +15,14 @@ export default function About({ t }) {
         <div className="about__grid">
           <div className="about__aside">
             <SectionHeading index="01" label={a.label} title={a.title} variant="sh--flush" />
+            {photo && (
+              <div className="about__figure">
+                <div className="about__photo" data-reveal="image">
+                  <Photo photo={photo} alt={a.photoAlt || ''} sizes="(max-width: 900px) 70vw, 380px" />
+                </div>
+                <Sprig className="about__sprig" />
+              </div>
+            )}
           </div>
 
           <div className="about__body" data-reveal>

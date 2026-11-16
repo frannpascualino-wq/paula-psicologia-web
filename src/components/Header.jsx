@@ -4,6 +4,7 @@ import { DOCTORALIA_URL, LOGO_URL } from '../config';
 export default function Header({ t, lang, setLang }) {
   const [scrolled, setScrolled] = useState(false);
   const [menuOpen, setMenuOpen] = useState(false);
+  const [active, setActive] = useState('');
 
   useEffect(() => {
     const onScroll = () => setScrolled(window.scrollY > 20);
@@ -23,6 +24,23 @@ export default function Header({ t, lang, setLang }) {
     window.addEventListener('keydown', onKey);
     return () => window.removeEventListener('keydown', onKey);
   }, [menuOpen]);
+
+  useEffect(() => {
+    if (!('IntersectionObserver' in window)) return undefined;
+    const sections = ['inicio', 'terapias', 'sobre-mi', 'servicios', 'primera-consulta', 'metodo', 'opiniones', 'agenda', 'contacto']
+      .map((id) => document.getElementById(id))
+      .filter(Boolean);
+    const observer = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) setActive(`#${entry.target.id}`);
+        });
+      },
+      { rootMargin: '-45% 0px -50% 0px' },
+    );
+    sections.forEach((section) => observer.observe(section));
+    return () => observer.disconnect();
+  }, []);
 
   const close = () => setMenuOpen(false);
 
@@ -64,7 +82,14 @@ export default function Header({ t, lang, setLang }) {
 
             <nav className="hdr__nav" aria-label="Navegación principal">
               {navLinks.map(l => (
-                <a key={l.href} href={l.href}>{l.label}</a>
+                <a
+                  key={l.href}
+                  href={l.href}
+                  className={active === l.href ? 'active' : ''}
+                  aria-current={active === l.href ? 'true' : undefined}
+                >
+                  {l.label}
+                </a>
               ))}
             </nav>
 

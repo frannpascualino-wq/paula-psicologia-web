@@ -6,6 +6,7 @@ import Header from './components/Header';
 import Hero from './components/Hero';
 import About from './components/About';
 import HelpTopics from './components/HelpTopics';
+import Interlude from './components/Interlude';
 import Services from './components/Services';
 import FirstSession from './components/FirstSession';
 import Approach from './components/Approach';
@@ -88,6 +89,7 @@ export default function App() {
         <Hero t={t} />
         <About t={t} />
         <HelpTopics t={t} />
+        <Interlude quote={t.whoFor.closing} />
         <Services t={t} />
         <FirstSession t={t} />
         <Approach t={t} />

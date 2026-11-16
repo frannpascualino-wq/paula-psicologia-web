@@ -11,7 +11,7 @@ export default function FirstSession({ t }) {
         <div className="first-session__inner">
           <div className="first-session__col">
             <SectionHeading index="04" label={s.label} title={s.title} lead={s.intro} variant="sh--flush" />
-            <ul className="first-session__list" aria-label={s.title} data-reveal>
+            <ul className="first-session__list" aria-label={s.title} data-reveal="stagger">
               {s.items.map((item, i) => (
                 <li key={i}>
                   <span className="first-session__dot" aria-hidden="true" />

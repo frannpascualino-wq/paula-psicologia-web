@@ -79,7 +79,7 @@ export default function Booking({ t }) {
             {bookingHelper && <p className="booking__helper">{bookingHelper}</p>}
             {whatsappNote && <p className="booking__whatsapp-note">{whatsappNote}</p>}
 
-            <div className="booking__features">
+            <div className="booking__features" data-reveal="stagger">
               {features.map((f, i) => (
                 <div key={i} className="booking__feature">
                   <span className="booking__feature-icon"><CheckIcon /></span>

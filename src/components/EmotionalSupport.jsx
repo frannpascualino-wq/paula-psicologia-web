@@ -8,7 +8,7 @@ export default function EmotionalSupport({ t }) {
   if (!esa) return null;
 
   return (
-    <article id="apoyo-emocional" className="esa" aria-labelledby="esa-title" data-reveal>
+    <article id="apoyo-emocional" className="esa" aria-labelledby="esa-title" data-reveal="draw">
       {illustration && (
         <div className="esa__media">
           <img

@@ -9,7 +9,7 @@ export default function HelpTopics({ t }) {
         <div className="topics__grid">
           <SectionHeading index="02" label={w.label} title={w.title} variant="sh--flush" />
 
-          <ul className="topics__list" aria-label={w.title} data-reveal>
+          <ul className="topics__list" aria-label={w.title} data-reveal="stagger">
             {w.items.map((item, i) => (
               <li key={i} className="topics__item">
                 <span className="topics__item-mark" aria-hidden="true" />
@@ -18,10 +18,6 @@ export default function HelpTopics({ t }) {
             ))}
           </ul>
         </div>
-
-        {w.closing && (
-          <p className="topics__closing" data-reveal>{w.closing}</p>
-        )}
       </div>
     </section>
   );

@@ -53,6 +53,7 @@ const content = {
       p4: 'Nací en Buenos Aires, Argentina, y he vivido en Puerto Rico, Brasil y actualmente en Ciudad de México. Estas experiencias multiculturales han nutrido mi mirada clínica, permitiéndome acompañar a personas de distintos contextos, historias y formas de vida.',
       p5: 'Mi objetivo es ofrecer un espacio seguro donde puedas poner en palabras aquello que duele, se repite o todavía no ha podido ser elaborado.',
       cta: 'Agendar en Doctoralia',
+      photoAlt: 'Mesa de cristal y sillón del consultorio, con los árboles de Polanco al fondo',
     },
 
     whoFor: {
@@ -327,6 +328,7 @@ const content = {
       p4: 'Nasci em Buenos Aires, Argentina, e vivi em Porto Rico, Brasil e atualmente na Cidade do México. Essas experiências multiculturais enriqueceram minha visão clínica, permitindo-me acompanhar pessoas de diferentes contextos, histórias e formas de vida.',
       p5: 'Meu objetivo é oferecer um espaço seguro onde você possa colocar em palavras aquilo que dói, se repete ou ainda não pôde ser elaborado.',
       cta: 'Agendar no Doctoralia',
+      photoAlt: 'Mesa de vidro e poltrona do consultório, com as árvores de Polanco ao fundo',
     },
 
     whoFor: {
@@ -599,6 +601,19 @@ const paulaCogorno = {
     ogImage: '/doctors/paula-cogorno/paulacpic.jpeg',
     emotionalSupportLogo: '/doctors/paula-cogorno/certificado-apoyo-emocional.svg',
     emotionalSupportIllustration: '/doctors/paula-cogorno/apoyo-emocional-ilustracion.svg',
+    interludePhoto: {
+      webpSmall: '/doctors/paula-cogorno/consultorio-720.webp',
+      webp: '/doctors/paula-cogorno/consultorio-1448.webp',
+      jpg: '/doctors/paula-cogorno/consultorio-1080.jpg',
+      width: 1448,
+      height: 1086,
+    },
+    officeDetailPhoto: {
+      webp: [['/doctors/paula-cogorno/consultorio-detalle-580.webp', 580]],
+      jpg: '/doctors/paula-cogorno/consultorio-detalle-580.jpg',
+      width: 580,
+      height: 725,
+    },
     officeGallery: [
       {
         webp: [
