@@ -9,7 +9,7 @@ export default function Testimonials({ t }) {
     <section id="opiniones" className="section testimonials">
       <div className="container">
         <SectionHeading index="06" label={label} title={title} />
-        <div className="testimonials__grid" data-reveal="stagger">
+        <div className="testimonials__grid h-scroll" data-reveal="stagger">
           {items.map((item, i) => (
             <figure key={i} className="testi-card">
               <span className="testi-quote-icon" aria-hidden="true">“</span>

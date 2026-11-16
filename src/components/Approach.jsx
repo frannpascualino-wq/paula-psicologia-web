@@ -9,7 +9,7 @@ export default function Approach({ t }) {
       <div className="approach__sprig" data-reveal="draw"><Sprig /></div>
       <div className="container">
         <SectionHeading index="05" label={label} title={title} lead={subtitle} variant="sh--light" />
-        <ol className="approach__grid" data-reveal="stagger">
+        <ol className="approach__grid h-scroll" data-reveal="stagger">
           {items.map((item, i) => (
             <li key={i} className="approach-card">
               <div className="approach-num" aria-hidden="true">0{i + 1}</div>

@@ -33,7 +33,7 @@ export default function Services({ t }) {
           {intro && <p className="svc-head__intro" data-reveal>{intro}</p>}
         </div>
 
-        <div className="svc-grid" data-reveal="stagger">
+        <div className="svc-grid h-scroll" data-reveal="stagger">
           {cards.map((card, i) => (
             <article key={i} className="svc-card">
               <div className="svc-card__top">

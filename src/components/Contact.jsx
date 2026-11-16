@@ -114,7 +114,7 @@ export default function Contact({ t }) {
 
         {gallery.length > 0 && (
           <figure className="contact__gallery">
-            <div className="contact__gallery-grid">
+            <div className="contact__gallery-grid h-scroll">
               {gallery.map((photo, i) => (
                 <div key={photo.jpg} className={`contact__gallery-item contact__gallery-item--${i + 1}`} data-reveal="image">
                   <Photo

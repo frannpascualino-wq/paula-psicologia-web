@@ -13,6 +13,7 @@ const content = {
       agenda: 'Agenda',
       contacto: 'Contacto',
       cta: 'Agendar en Doctoralia',
+      ctaShort: 'Agendar ahora',
     },
 
     hero: {
@@ -54,6 +55,8 @@ const content = {
       p5: 'Mi objetivo es ofrecer un espacio seguro donde puedas poner en palabras aquello que duele, se repite o todavía no ha podido ser elaborado.',
       cta: 'Agendar en Doctoralia',
       photoAlt: 'Mesa de cristal y sillón del consultorio, con los árboles de Polanco al fondo',
+      readMore: 'Leer más',
+      readLess: 'Leer menos',
     },
 
     whoFor: {
@@ -219,6 +222,7 @@ const content = {
         ],
         reason: 'Motivo de consulta (opcional)',
         reasonPlaceholder: 'Contame brevemente qué te gustaría trabajar…',
+        toggle: 'Abrir formulario',
         submit: 'Enviar mensaje',
         success: '¡Mensaje enviado! Paula se pondrá en contacto contigo pronto.',
         errors: {
@@ -288,6 +292,7 @@ const content = {
       agenda: 'Agenda',
       contacto: 'Contato',
       cta: 'Agendar no Doctoralia',
+      ctaShort: 'Agendar agora',
     },
 
     hero: {
@@ -329,6 +334,8 @@ const content = {
       p5: 'Meu objetivo é oferecer um espaço seguro onde você possa colocar em palavras aquilo que dói, se repete ou ainda não pôde ser elaborado.',
       cta: 'Agendar no Doctoralia',
       photoAlt: 'Mesa de vidro e poltrona do consultório, com as árvores de Polanco ao fundo',
+      readMore: 'Ler mais',
+      readLess: 'Ler menos',
     },
 
     whoFor: {
@@ -498,6 +505,7 @@ const content = {
         ],
         reason: 'Motivo da consulta (opcional)',
         reasonPlaceholder: 'Conte brevemente o que você gostaria de trabalhar…',
+        toggle: 'Abrir formulário',
         submit: 'Enviar mensagem',
         success: 'Mensagem enviada! Paula entrará em contato em breve.',
         errors: {

@@ -1,5 +1,6 @@
 import { useState, useEffect } from 'react';
 import { DOCTORALIA_URL, LOGO_URL } from '../config';
+import { CalendarIcon } from './Icons';
 
 export default function Header({ t, lang, setLang }) {
   const [scrolled, setScrolled] = useState(false);
@@ -99,9 +100,10 @@ export default function Header({ t, lang, setLang }) {
                 href={DOCTORALIA_URL}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="btn btn-primary btn-sm hdr__cta"
+                className="btn btn-accent btn-sm hdr__cta"
               >
-                {t.nav.cta}
+                <CalendarIcon size={15} />
+                {t.nav.ctaShort || t.nav.cta}
               </a>
               <button
                 className={`hdr__hamburger${menuOpen ? ' open' : ''}`}

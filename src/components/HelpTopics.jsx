@@ -7,7 +7,7 @@ export default function HelpTopics({ t }) {
     <section id="terapias" className="section topics">
       <div className="container">
         <div className="topics__grid">
-          <SectionHeading index="02" label={w.label} title={w.title} variant="sh--flush" />
+          <SectionHeading index="02" label={w.label} title={w.title} />
 
           <ul className="topics__list" aria-label={w.title} data-reveal="stagger">
             {w.items.map((item, i) => (

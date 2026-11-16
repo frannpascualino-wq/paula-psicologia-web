@@ -15,6 +15,7 @@ import Booking from './components/Booking';
 import Contact from './components/Contact';
 import Footer from './components/Footer';
 import WhatsAppBubble from './components/WhatsAppBubble';
+import BookingBar from './components/BookingBar';
 
 export default function App() {
   const [lang, setLang] = useState('es');
@@ -98,6 +99,7 @@ export default function App() {
         <Contact t={t} />
       </main>
       <WhatsAppBubble />
+      <BookingBar t={t} />
       <Footer t={t} />
     </>
   );

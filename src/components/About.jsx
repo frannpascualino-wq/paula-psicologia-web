@@ -1,3 +1,4 @@
+import { useState } from 'react';
 import { DOCTORALIA_URL } from '../config';
 import { doctorData } from '../data/doctorData';
 import SectionHeading from './SectionHeading';
@@ -7,6 +8,8 @@ import { ArrowIcon } from './Icons';
 
 export default function About({ t }) {
   const a = t.about;
+  const [expanded, setExpanded] = useState(false);
+  const hasMore = Boolean(a.p4 || a.p5);
   const photo = doctorData.assets.officeDetailPhoto;
 
   return (
@@ -30,9 +33,23 @@ export default function About({ t }) {
             <div className="about__text">
               <p>{a.p2}</p>
               <p>{a.p3}</p>
-              {a.p4 && <p>{a.p4}</p>}
-              {a.p5 && <p>{a.p5}</p>}
+              <div id="sobre-mi-mas" className="about__more" hidden={!expanded}>
+                {a.p4 && <p>{a.p4}</p>}
+                {a.p5 && <p>{a.p5}</p>}
+              </div>
             </div>
+            {hasMore && (
+              <button
+                type="button"
+                className="about__toggle"
+                aria-expanded={expanded}
+                aria-controls="sobre-mi-mas"
+                onClick={() => setExpanded((v) => !v)}
+              >
+                {expanded ? a.readLess : a.readMore}
+                <span aria-hidden="true">{expanded ? '−' : '+'}</span>
+              </button>
+            )}
             <a
               href={DOCTORALIA_URL}
               target="_blank"

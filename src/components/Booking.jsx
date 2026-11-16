@@ -9,6 +9,7 @@ export default function Booking({ t }) {
   const [values, setValues]   = useState(INITIAL);
   const [errors, setErrors]   = useState({});
   const [sent, setSent]       = useState(false);
+  const [formOpen, setFormOpen] = useState(false);
 
   useEffect(() => {
     if (document.getElementById('zl-widget-s')) return;
@@ -87,8 +88,6 @@ export default function Booking({ t }) {
                 </div>
               ))}
             </div>
-
-            <div className="booking__divider">{orDivider}</div>
           </div>
 
           <div className="booking__right">
@@ -120,6 +119,20 @@ export default function Booking({ t }) {
             </div>
 
             <div className="booking__form-card">
+              <button
+                type="button"
+                className="booking__form-toggle"
+                aria-expanded={formOpen}
+                aria-controls="formulario-contacto"
+                onClick={() => setFormOpen((v) => !v)}
+              >
+                <span className="booking__divider">{orDivider}</span>
+                <span className="booking__form-toggle-action">
+                  {form.toggle}
+                  <span aria-hidden="true">{formOpen ? '−' : '+'}</span>
+                </span>
+              </button>
+              <div id="formulario-contacto" className="booking__form-panel" hidden={!formOpen}>
               {sent ? (
                 <div className="booking__success" role="status">{form.success}</div>
               ) : (
@@ -163,6 +176,7 @@ export default function Booking({ t }) {
                   </button>
                 </form>
               )}
+              </div>
             </div>
           </div>
         </div>
