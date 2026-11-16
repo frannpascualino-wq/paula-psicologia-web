@@ -57,7 +57,7 @@ export default function Booking({ t }) {
       <div className="container">
         <div className="booking__inner">
           <div className="booking__info">
-            <SectionHeading index="07" label={label} title={title} lead={subtitle} variant="sh--flush" />
+            <SectionHeading index="08" label={label} title={title} lead={subtitle} variant="sh--flush" />
 
             <div className="booking__actions">
               <a

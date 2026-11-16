@@ -15,7 +15,7 @@ export default function Contact({ t }) {
       <div className="container">
         <div className="contact__inner">
           <div className="contact__info">
-            <SectionHeading index="08" label={c.label} title={c.title} variant="sh--flush" />
+            <SectionHeading index="09" label={c.label} title={c.title} variant="sh--flush" />
 
             <dl className="contact__blocks" data-reveal="stagger">
               <div className="contact__block">

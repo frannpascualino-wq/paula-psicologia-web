@@ -16,9 +16,10 @@ import Contact from './components/Contact';
 import Footer from './components/Footer';
 import WhatsAppBubble from './components/WhatsAppBubble';
 import BookingBar from './components/BookingBar';
+import Faq from './components/Faq';
 
-export default function App() {
-  const [lang, setLang] = useState('es');
+export default function App({ initialLang = 'es' }) {
+  const [lang, setLang] = useState(content[initialLang] ? initialLang : 'es');
   const t = content[lang];
 
   useEffect(() => {
@@ -64,22 +65,25 @@ export default function App() {
 
   useEffect(() => {
     const seo = doctorData.seo[lang] || doctorData.seo.es;
-    document.documentElement.lang = lang;
+    document.documentElement.lang = seo.htmlLang || lang;
     document.title = seo.title;
 
-    const setMeta = (selector, value) => {
+    const setAttr = (selector, attr, value) => {
       if (!value) return;
       const el = document.querySelector(selector);
-      if (el) el.setAttribute('content', value);
+      if (el) el.setAttribute(attr, value);
     };
 
-    setMeta('meta[name="description"]', seo.description);
-    setMeta('meta[name="keywords"]', seo.keywords);
-    setMeta('meta[property="og:title"]', seo.ogTitle);
-    setMeta('meta[property="og:description"]', seo.ogDescription);
-    setMeta('meta[property="og:locale"]', seo.ogLocale);
-    setMeta('meta[property="og:url"]', seo.ogUrl);
-    setMeta('meta[property="og:image"]', doctorData.assets.ogImage);
+    setAttr('meta[name="description"]', 'content', seo.description);
+    setAttr('meta[property="og:title"]', 'content', seo.ogTitle);
+    setAttr('meta[property="og:description"]', 'content', seo.ogDescription);
+    setAttr('meta[property="og:locale"]', 'content', seo.ogLocale);
+    setAttr('meta[property="og:url"]', 'content', seo.ogUrl);
+    setAttr('link[rel="canonical"]', 'href', seo.ogUrl);
+
+    if (seo.path && window.location.pathname !== seo.path) {
+      window.history.replaceState(null, '', seo.path + window.location.search + window.location.hash);
+    }
   }, [lang]);
 
   return (
@@ -95,6 +99,7 @@ export default function App() {
         <FirstSession t={t} />
         <Approach t={t} />
         <Testimonials t={t} />
+        <Faq t={t} />
         <Booking t={t} />
         <Contact t={t} />
       </main>
