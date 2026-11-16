@@ -1,42 +1,42 @@
-import { DOCTORALIA_URL } from '../config';
+import { DOCTORALIA_URL, DOCTORALIA_WIDGET, DOCTORALIA_REVIEWS_WIDGET } from '../config';
 import SectionHeading from './SectionHeading';
-import { ArrowIcon, StarIcon } from './Icons';
+import { ArrowIcon } from './Icons';
 
 export default function Testimonials({ t }) {
-  const { label, title, note, ctaProfile, ctaReviews, ratingLabel, reviewsText } = t.testimonials;
-  const doctoralia = t.hero.doctoralia || {};
-  const rating = Number(doctoralia.rating || 5);
-  const filled = Math.max(1, Math.min(5, Math.round(rating)));
+  const { label, title, lead, ctaReviews } = t.testimonials;
+  const widget = DOCTORALIA_REVIEWS_WIDGET;
 
   return (
     <section id="opiniones" className="section testimonials">
       <div className="container">
         <div className="reviews">
-          <SectionHeading index="06" label={label} title={title} variant="sh--flush" />
-
-          <div className="reviews__card" data-reveal>
-            <p className="reviews__label">{ratingLabel}</p>
-            <div className="reviews__score">
-              <span className="reviews__number">{rating.toFixed(1).replace('.', ',')}</span>
-              <span className="reviews__stars" aria-label={`${rating} / 5`}>
-                {[...Array(5)].map((_, i) => (
-                  <span key={i} className={i < filled ? 'is-filled' : ''}><StarIcon size={18} /></span>
-                ))}
-              </span>
-            </div>
-            <p className="reviews__count">{reviewsText}</p>
-            <p className="reviews__note">{note}</p>
-            <div className="reviews__cta">
-              <a href={DOCTORALIA_URL} target="_blank" rel="noopener noreferrer" className="btn btn-primary">
-                {ctaReviews}
-                <ArrowIcon />
-              </a>
-              <a href={DOCTORALIA_URL} target="_blank" rel="noopener noreferrer" className="link-arrow">
-                {ctaProfile}
-                <ArrowIcon />
-              </a>
-            </div>
+          <div className="reviews__intro">
+            <SectionHeading index="06" label={label} title={title} lead={lead} variant="sh--flush" />
+            <a href={DOCTORALIA_URL} target="_blank" rel="noopener noreferrer" className="link-arrow reviews__link">
+              {ctaReviews}
+              <ArrowIcon />
+            </a>
           </div>
+
+          {widget && (
+            <div className="reviews__card" data-integration="doctoralia-reviews" data-reveal>
+              <a
+                id="zl-url-opiniones"
+                className="zl-url"
+                href={DOCTORALIA_URL}
+                rel="nofollow noopener noreferrer"
+                target="_blank"
+                data-zlw-doctor={DOCTORALIA_WIDGET.doctorId}
+                data-zlw-type={widget.type}
+                data-zlw-opinion={String(widget.opinion)}
+                data-zlw-hide-branding="true"
+                data-zlw-saas-only="true"
+                data-zlw-a11y-title={widget.a11yTitle}
+              >
+                {ctaReviews}
+              </a>
+            </div>
+          )}
         </div>
       </div>
     </section>

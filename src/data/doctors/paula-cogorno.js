@@ -185,11 +185,8 @@ const content = {
     testimonials: {
       label: 'Opiniones',
       title: 'La confianza se construye en el proceso',
-      ratingLabel: 'Calificación en Doctoralia',
-      reviewsText: '26 opiniones verificadas de pacientes',
-      note: 'Por respeto a la confidencialidad, las opiniones se publican y verifican en Doctoralia, no en este sitio.',
-      ctaProfile: 'Ver perfil en Doctoralia',
-      ctaReviews: 'Leer las opiniones',
+      lead: 'Las opiniones de pacientes se publican y verifican en Doctoralia. Aquí puedes ver la calificación y la reseña más reciente, actualizadas en tiempo real.',
+      ctaReviews: 'Leer todas las opiniones en Doctoralia',
     },
 
     faq: {
@@ -203,7 +200,6 @@ const content = {
         { q: '¿Qué temas trabajas?', a: 'Ansiedad, angustia, duelos, conflictos de pareja, crisis vitales, dependencia emocional, celos, separaciones y procesos de cambio personal, entre otros.' },
         { q: '¿Qué enfoque utilizas?', a: 'Tengo formación en Psicoanálisis y Terapia Cognitivo-Conductual. Integro la comprensión profunda de tu historia con herramientas concretas para el día a día.' },
         { q: '¿Cómo es la primera consulta?', a: 'Es un espacio confidencial para escuchar qué te trae, comprender tu momento actual, definir objetivos iniciales y orientarte sobre modalidad y frecuencia. No necesitas saber exactamente por dónde empezar.' },
-        { q: '¿Cuánto cuesta la consulta?', a: 'El costo publicado en Doctoralia es de $1,000 MXN por sesión, presencial u online. Confirma el valor actualizado al agendar.' },
         { q: '¿Cómo agendo una cita?', a: 'Por Doctoralia, donde ves los horarios disponibles, o por WhatsApp al +52 55 4343 0309.' },
         { q: '¿Emites certificados de animal de apoyo emocional?', a: 'Sí, para perros y gatos, tras una evaluación psicológica presencial u online. La emisión está sujeta a la valoración, y su aceptación depende de los requisitos de cada aerolínea o institución.' },
       ],
@@ -482,11 +478,8 @@ const content = {
     testimonials: {
       label: 'Opiniões',
       title: 'A confiança se constrói no processo',
-      ratingLabel: 'Avaliação no Doctoralia',
-      reviewsText: '26 avaliações verificadas de pacientes',
-      note: 'Por respeito à confidencialidade, as avaliações são publicadas e verificadas no Doctoralia, não neste site.',
-      ctaProfile: 'Ver perfil no Doctoralia',
-      ctaReviews: 'Ler as avaliações',
+      lead: 'As avaliações de pacientes são publicadas e verificadas no Doctoralia. Aqui você vê a nota e a avaliação mais recente, atualizadas em tempo real.',
+      ctaReviews: 'Ler todas as avaliações no Doctoralia',
     },
 
     faq: {
@@ -500,7 +493,6 @@ const content = {
         { q: 'Quais temas você trabalha?', a: 'Ansiedade, angústia, lutos, conflitos de casal, crises vitais, dependência emocional, ciúmes, separações e processos de mudança pessoal, entre outros.' },
         { q: 'Qual é a sua abordagem?', a: 'Tenho formação em Psicanálise e Terapia Cognitivo-Comportamental. Integro a compreensão profunda da sua história com ferramentas concretas para o dia a dia.' },
         { q: 'Como é a primeira consulta?', a: 'É um espaço confidencial para escutar o que te traz, compreender seu momento atual, definir objetivos iniciais e orientar sobre modalidade e frequência. Você não precisa saber exatamente por onde começar.' },
-        { q: 'Quanto custa a consulta?', a: 'O valor publicado no Doctoralia é de $1,000 MXN por sessão, presencial ou online. Confirme o valor atualizado ao agendar.' },
         { q: 'Como agendo uma consulta?', a: 'Pelo Doctoralia, onde você vê os horários disponíveis, ou por WhatsApp no +52 55 4343 0309.' },
         { q: 'Você emite certificado de animal de apoio emocional?', a: 'Sim, para cães e gatos, após uma avaliação psicológica presencial ou online. A emissão depende da avaliação, e a aceitação depende dos requisitos de cada companhia aérea ou instituição.' },
       ],
@@ -627,6 +619,11 @@ const paulaCogorno = {
       saasOnly: true,
       ctaText: 'Reserve una cita',
       a11yTitle: 'Widget de reserva de citas médicas',
+    },
+    doctoraliaReviewsWidget: {
+      type: 'big',
+      opinion: true,
+      a11yTitle: 'Opiniones verificadas de pacientes en Doctoralia',
     },
   },
   assets: {

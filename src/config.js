@@ -12,3 +12,4 @@ export const LOGO_URL = doctorData.assets.logo;
 export const PROFILE_IMAGE_URL = doctorData.assets.profilePhoto;
 export const PROFILE_FALLBACK_IMAGE_URL = doctorData.assets.profileFallbackPhoto;
 export const DOCTORALIA_WIDGET = doctorData.integrations.doctoraliaWidget;
+export const DOCTORALIA_REVIEWS_WIDGET = doctorData.integrations.doctoraliaReviewsWidget;
