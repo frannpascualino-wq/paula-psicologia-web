@@ -1,5 +1,6 @@
 import { useEffect, useState } from 'react';
 import { DOCTORALIA_URL, WHATSAPP_URL, EMAIL, LOGO_URL, DOCTORALIA_WIDGET } from '../config';
+import SectionHeading from './SectionHeading';
 
 const INITIAL = { name: '', email: '', phone: '', modality: '', reason: '' };
 
@@ -55,9 +56,7 @@ export default function Booking({ t }) {
       <div className="container">
         <div className="booking__inner">
           <div className="booking__info">
-            <span className="label">{label}</span>
-            <h2 className="h2">{title}</h2>
-            <p className="lead">{subtitle}</p>
+            <SectionHeading index="07" label={label} title={title} lead={subtitle} variant="sh--flush" />
 
             <div className="booking__actions">
               <a
@@ -122,7 +121,7 @@ export default function Booking({ t }) {
 
             <div className="booking__form-card">
               {sent ? (
-                <div className="booking__success">{form.success}</div>
+                <div className="booking__success" role="status">{form.success}</div>
               ) : (
                 <form className="booking__form" onSubmit={handleSubmit} noValidate>
                   <div className="booking__form-row">
@@ -175,9 +174,11 @@ export default function Booking({ t }) {
 function Field({ label, error, input }) {
   return (
     <div className="form-group">
-      <label className="form-label">{label}</label>
-      {input}
-      {error && <span className="form-error">{error}</span>}
+      <label className="form-label">
+        <span>{label}</span>
+        {input}
+      </label>
+      {error && <span className="form-error" role="alert">{error}</span>}
     </div>
   );
 }

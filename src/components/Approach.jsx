@@ -1,24 +1,22 @@
+import SectionHeading from './SectionHeading';
+
 export default function Approach({ t }) {
   const { label, title, subtitle, items } = t.approach;
 
   return (
-    <section id="metodo" className="section section--sage">
+    <section id="metodo" className="section section--dark approach">
       <div className="container">
-        <div className="approach__header">
-          <span className="label">{label}</span>
-          <h2 className="h2">{title}</h2>
-          <p className="lead" style={{ marginTop: 10, maxWidth: 540, margin: '10px auto 0' }}>{subtitle}</p>
-        </div>
-        <div className="approach__grid">
+        <SectionHeading index="05" label={label} title={title} lead={subtitle} variant="sh--light" />
+        <ol className="approach__grid" data-reveal>
           {items.map((item, i) => (
-            <div key={i} className="approach-card">
-              <div className="approach-num">0{i + 1}</div>
-              <div className="approach-title">{item.title}</div>
+            <li key={i} className="approach-card">
+              <div className="approach-num" aria-hidden="true">0{i + 1}</div>
+              <h3 className="approach-title">{item.title}</h3>
               <p className="approach-desc">{item.desc}</p>
               <div className="approach-detail">{item.detail}</div>
-            </div>
+            </li>
           ))}
-        </div>
+        </ol>
       </div>
     </section>
   );

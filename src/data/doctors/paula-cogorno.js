@@ -129,7 +129,7 @@ const content = {
         cta: 'Agenda tu evaluación',
         disclaimer: 'La emisión del certificado está sujeta a valoración psicológica. Su aceptación depende de los requisitos de cada aerolínea o institución.',
         logoAlt: 'Logo del Certificado de Animal de Apoyo Emocional',
-        photoAlt: 'Consultorio de Paula Cogorno en Polanco, CDMX',
+        illustrationAlt: 'Ilustración de un gato y un perro de apoyo emocional',
       },
     },
 
@@ -249,6 +249,12 @@ const content = {
       doctoraliaCta: 'Ver en Doctoralia',
       whatsappCta: 'Enviar WhatsApp',
       mapNote: 'Mapa referencial del área de atención en Polanco.',
+      galleryCaption: 'Consultorio en Polanco, CDMX',
+      galleryAlts: [
+        'Entrada del edificio del consultorio en Polanco',
+        'Interior del consultorio con sillones, mesa de cristal y vista a los árboles',
+        'Sillones del consultorio junto al ventanal',
+      ],
     },
 
     footer: {
@@ -401,7 +407,7 @@ const content = {
         cta: 'Agende sua avaliação',
         disclaimer: 'A emissão do certificado está sujeita a avaliação psicológica. Sua aceitação depende dos requisitos de cada companhia aérea ou instituição.',
         logoAlt: 'Logo do Certificado de Animal de Apoio Emocional',
-        photoAlt: 'Consultório de Paula Cogorno em Polanco, CDMX',
+        illustrationAlt: 'Ilustração de um gato e um cão de apoio emocional',
       },
     },
 
@@ -521,6 +527,12 @@ const content = {
       doctoraliaCta: 'Ver no Doctoralia',
       whatsappCta: 'Enviar WhatsApp',
       mapNote: 'Mapa referencial da área de atendimento em Polanco.',
+      galleryCaption: 'Consultório em Polanco, CDMX',
+      galleryAlts: [
+        'Entrada do prédio do consultório em Polanco',
+        'Interior do consultório com poltronas, mesa de vidro e vista para as árvores',
+        'Poltronas do consultório junto à janela',
+      ],
     },
 
     footer: {
@@ -586,13 +598,36 @@ const paulaCogorno = {
     officePhoto: '/doctors/paula-cogorno/office.jpg',
     ogImage: '/doctors/paula-cogorno/paulacpic.jpeg',
     emotionalSupportLogo: '/doctors/paula-cogorno/certificado-apoyo-emocional.svg',
-    emotionalSupportPhoto: {
-      webp720: '/doctors/paula-cogorno/consultorio-720.webp',
-      webp1080: '/doctors/paula-cogorno/consultorio-1080.webp',
-      jpg: '/doctors/paula-cogorno/consultorio-1080.jpg',
-      width: 1080,
-      height: 810,
-    },
+    emotionalSupportIllustration: '/doctors/paula-cogorno/apoyo-emocional-ilustracion.svg',
+    officeGallery: [
+      {
+        webp: [
+          ['/doctors/paula-cogorno/edificio-entrada-600.webp', 600],
+          ['/doctors/paula-cogorno/edificio-entrada-1000.webp', 1000],
+        ],
+        jpg: '/doctors/paula-cogorno/edificio-entrada-1000.jpg',
+        width: 1000,
+        height: 1333,
+      },
+      {
+        webp: [
+          ['/doctors/paula-cogorno/consultorio-720.webp', 720],
+          ['/doctors/paula-cogorno/consultorio-1080.webp', 1080],
+        ],
+        jpg: '/doctors/paula-cogorno/consultorio-1080.jpg',
+        width: 1080,
+        height: 810,
+      },
+      {
+        webp: [
+          ['/doctors/paula-cogorno/consultorio-sillones-600.webp', 600],
+          ['/doctors/paula-cogorno/consultorio-sillones-960.webp', 960],
+        ],
+        jpg: '/doctors/paula-cogorno/consultorio-sillones-960.jpg',
+        width: 960,
+        height: 1280,
+      },
+    ],
   },
   seo: {
     es: {
@@ -623,9 +658,9 @@ const paulaCogorno = {
       accent: '#C4714A',
       text: '#1A1F1C',
       textMuted: '#4A5048',
-      textLight: '#8A9088',
-      border: '#DDD8D0',
-      borderLight: '#EAE5DD',
+      textLight: '#6A7068',
+      border: '#D5CDE2',
+      borderLight: '#E4DDED',
     },
   },
   content,

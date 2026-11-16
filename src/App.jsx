@@ -40,6 +40,27 @@ export default function App() {
   }, []);
 
   useEffect(() => {
+    if (!('IntersectionObserver' in window)) return undefined;
+    const root = document.documentElement;
+    root.classList.add('has-reveal');
+    const observer = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          if (!entry.isIntersecting) return;
+          entry.target.classList.add('is-in');
+          observer.unobserve(entry.target);
+        });
+      },
+      { rootMargin: '0px 0px -6% 0px', threshold: 0.06 },
+    );
+    document.querySelectorAll('[data-reveal]').forEach((el) => observer.observe(el));
+    return () => {
+      observer.disconnect();
+      root.classList.remove('has-reveal');
+    };
+  }, []);
+
+  useEffect(() => {
     const seo = doctorData.seo[lang] || doctorData.seo.es;
     document.documentElement.lang = lang;
     document.title = seo.title;
@@ -61,8 +82,9 @@ export default function App() {
 
   return (
     <>
+      <a href="#contenido" className="skip-link">{lang === 'pt' ? 'Ir para o conteúdo' : 'Ir al contenido'}</a>
       <Header t={t} lang={lang} setLang={setLang} />
-      <main>
+      <main id="contenido">
         <Hero t={t} />
         <About t={t} />
         <HelpTopics t={t} />

@@ -1,4 +1,5 @@
 import { EMAIL, PHONE, WHATSAPP_URL, DOCTORALIA_URL, LOGO_URL } from '../config';
+import { PinIcon } from './Icons';
 
 export default function Footer({ t }) {
   const f = t.footer;
@@ -14,21 +15,25 @@ export default function Footer({ t }) {
               src={LOGO_URL}
               alt={f.logoAlt || 'Logo'}
               className="footer__logo"
+              width="64"
+              height="64"
               loading="lazy"
               decoding="async"
             />
             <div className="footer__name">{f.brandName || 'Nombre profesional'}</div>
-            <div className="footer__tagline">{f.tagline}</div>
-            {f.credential && <div className="footer__credential">{f.credential}</div>}
+            <div className="footer__tagline">
+              {f.tagline}
+              {f.credential && <span className="footer__credential"> · {f.credential}</span>}
+            </div>
             <div className="footer__location">
-              <PinIcon />
+              <PinIcon size={14} />
               {f.location}
             </div>
           </div>
 
           <div>
             <div className="footer__col-title">{f.navigationTitle || 'Navegación'}</div>
-            <nav className="footer__links">
+            <nav className="footer__links" aria-label={f.navigationTitle || 'Navegación'}>
               <a href="#sobre-mi">{f.links.sobreMi}</a>
               <a href="#servicios">{f.links.terapias}</a>
               <a href="#primera-consulta">{f.links.primeraConsulta}</a>
@@ -53,23 +58,17 @@ export default function Footer({ t }) {
         <div className="footer__bottom">
           <p className="footer__disclaimer">{f.disclaimer}</p>
           {f.demoDisclaimer && <p className="footer__demo-disclaimer">{f.demoDisclaimer}</p>}
-          <div className="footer__legal">
-            <a href="#">{f.privacy}</a>
-            <a href="#">{f.terms}</a>
-          </div>
-          <div className="footer__copyright">
-            {f.copyright.replace('2025', year)}
+          <div className="footer__meta">
+            <div className="footer__copyright">
+              {f.copyright.replace('2025', year)}
+            </div>
+            <div className="footer__legal">
+              <a href="#">{f.privacy}</a>
+              <a href="#">{f.terms}</a>
+            </div>
           </div>
         </div>
       </div>
     </footer>
-  );
-}
-
-function PinIcon() {
-  return (
-    <svg width="12" height="12" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth="2" aria-hidden="true">
-      <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/>
-    </svg>
   );
 }
