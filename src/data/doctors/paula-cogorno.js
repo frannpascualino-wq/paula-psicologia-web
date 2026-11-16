@@ -109,6 +109,28 @@ const content = {
         'Intervención en crisis',
         'Terapia breve',
       ],
+      emotionalSupport: {
+        label: 'Evaluación psicológica',
+        title: 'Certificado de Animal de Apoyo Emocional',
+        subtitle: 'Para perros y gatos.',
+        paragraphs: [
+          'Tu mascota puede ser una parte fundamental de tu bienestar emocional.',
+          'Los perros y gatos de apoyo emocional brindan compañía, seguridad y contención a personas que atraviesan situaciones de ansiedad, estrés u otras dificultades emocionales.',
+          'Como psicóloga clínica, realizo evaluaciones psicológicas para determinar la necesidad de contar con un animal de apoyo emocional y emitir la constancia profesional correspondiente.',
+        ],
+        usesTitle: '¿Para qué puede servir?',
+        uses: [
+          'Viajes en avión.',
+          'Vivienda y alojamiento.',
+          'Otras situaciones que requieran justificar el acompañamiento emocional de tu mascota.',
+        ],
+        modalityTitle: 'Modalidad de atención',
+        modality: 'Evaluaciones presenciales en Polanco, CDMX, y online.',
+        cta: 'Agenda tu evaluación',
+        disclaimer: 'La emisión del certificado está sujeta a valoración psicológica. Su aceptación depende de los requisitos de cada aerolínea o institución.',
+        logoAlt: 'Logo del Certificado de Animal de Apoyo Emocional',
+        photoAlt: 'Consultorio de Paula Cogorno en Polanco, CDMX',
+      },
     },
 
     firstSession: {
@@ -237,6 +259,7 @@ const content = {
         terapias: 'Servicios',
         primeraConsulta: 'Primera consulta',
         metodo: 'Método',
+        apoyoEmocional: 'Animal de apoyo emocional',
         agenda: 'Agendar en Doctoralia',
         contacto: 'Contacto',
       },
@@ -358,6 +381,28 @@ const content = {
         'Intervenção em crise',
         'Terapia breve',
       ],
+      emotionalSupport: {
+        label: 'Avaliação psicológica',
+        title: 'Certificado de Animal de Apoio Emocional',
+        subtitle: 'Para cães e gatos.',
+        paragraphs: [
+          'Seu animal de estimação pode ser uma parte fundamental do seu bem-estar emocional.',
+          'Cães e gatos de apoio emocional oferecem companhia, segurança e acolhimento a pessoas que atravessam situações de ansiedade, estresse ou outras dificuldades emocionais.',
+          'Como psicóloga clínica, realizo avaliações psicológicas para determinar a necessidade de contar com um animal de apoio emocional e emitir a declaração profissional correspondente.',
+        ],
+        usesTitle: 'Para que pode servir?',
+        uses: [
+          'Viagens de avião.',
+          'Moradia e hospedagem.',
+          'Outras situações que exijam justificar o acompanhamento emocional do seu animal.',
+        ],
+        modalityTitle: 'Modalidade de atendimento',
+        modality: 'Avaliações presenciais em Polanco, CDMX, e online.',
+        cta: 'Agende sua avaliação',
+        disclaimer: 'A emissão do certificado está sujeita a avaliação psicológica. Sua aceitação depende dos requisitos de cada companhia aérea ou instituição.',
+        logoAlt: 'Logo do Certificado de Animal de Apoio Emocional',
+        photoAlt: 'Consultório de Paula Cogorno em Polanco, CDMX',
+      },
     },
 
     firstSession: {
@@ -486,6 +531,7 @@ const content = {
         terapias: 'Serviços',
         primeraConsulta: 'Primeira consulta',
         metodo: 'Método',
+        apoyoEmocional: 'Animal de apoio emocional',
         agenda: 'Agendar no Doctoralia',
         contacto: 'Contato',
       },
@@ -539,6 +585,14 @@ const paulaCogorno = {
     profileFallbackPhoto: '/doctors/paula-cogorno/paulacpic.jpeg',
     officePhoto: '/doctors/paula-cogorno/office.jpg',
     ogImage: '/doctors/paula-cogorno/paulacpic.jpeg',
+    emotionalSupportLogo: '/doctors/paula-cogorno/certificado-apoyo-emocional.svg',
+    emotionalSupportPhoto: {
+      webp720: '/doctors/paula-cogorno/consultorio-720.webp',
+      webp1080: '/doctors/paula-cogorno/consultorio-1080.webp',
+      jpg: '/doctors/paula-cogorno/consultorio-1080.jpg',
+      width: 1080,
+      height: 810,
+    },
   },
   seo: {
     es: {

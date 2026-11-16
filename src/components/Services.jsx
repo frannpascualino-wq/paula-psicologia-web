@@ -1,4 +1,5 @@
 import { DOCTORALIA_URL } from '../config';
+import EmotionalSupport from './EmotionalSupport';
 
 const cardMeta = [
   {
@@ -78,6 +79,8 @@ export default function Services({ t }) {
             <span key={i} className="services__chip">{chip}</span>
           ))}
         </div>
+
+        <EmotionalSupport t={t} />
 
       </div>
     </section>

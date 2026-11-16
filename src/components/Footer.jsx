@@ -33,6 +33,7 @@ export default function Footer({ t }) {
               <a href="#servicios">{f.links.terapias}</a>
               <a href="#primera-consulta">{f.links.primeraConsulta}</a>
               <a href="#metodo">{f.links.metodo}</a>
+              {f.links.apoyoEmocional && <a href="#apoyo-emocional">{f.links.apoyoEmocional}</a>}
               <a href={DOCTORALIA_URL} target="_blank" rel="noopener noreferrer">{f.links.agenda}</a>
               <a href="#contacto">{f.links.contacto}</a>
             </nav>
